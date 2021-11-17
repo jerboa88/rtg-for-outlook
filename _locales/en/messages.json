@@ -1,0 +1,14 @@
+{
+	"extensionName": {
+		"message": "Random Text Generator for Outlook™",
+		"description": "The name of the extension"
+	},
+	"extensionShortName": {
+		"message": "RTG for Outlook",
+		"description": "The short name of the extension"
+	},
+	"extensionDescription": {
+		"message": "A browser extension that temporarily replaces private email content with random text for development purposes.",
+		"description": "A description of the extension"
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"name": "__MSG_extensionName__",
+	"short_name": "__MSG_extensionShortName__",
+	"description": "__MSG_extensionDescription__",
+	"version": "1.0",
+	"default_locale": "en",
+	"icons": {
+		"128": "img/128.png",
+		"64": "img/64.png",
+		"48": "img/48.png",
+		"32": "img/32.png",
+		"16": "img/16.png"
+	},
+	"action": {
+		"default_icon": {
+			"128": "img/128.png",
+			"64": "img/64.png",
+			"48": "img/48.png",
+			"32": "img/32.png",
+			"16": "img/16.png"
+		},
+		"default_title": "__MSG_extensionShortName__"
+	},
+	"permissions": [
+		"activeTab",
+		"scripting"
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"manifest_version": 3
+}
