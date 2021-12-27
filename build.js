@@ -3,18 +3,16 @@
 
 	// Deps
 	const fs = require('fs-extra');
-	const imagemin = require('imagemin');
-	const optiPng = require('imagemin-optipng');
-	const replace = require('replace-in-file');
+	const sharp = require('sharp');
 	const { join } = require('path');
 	const { sync: { zip } } = require('zip-local');
 
 	// Constants
 	const buildFolder = 'build';
-	const chromiumSubfolder = join(buildFolder, 'chromium');
 	const localeFolder = '_locales';
-	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'background.js', '_locales'];
+	const iconFilename = 'icon.svg';
 	const packageJson = 'package.json';
+	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'background.js', '_locales'];
 
 	// Runtime
 	let extensionName;
@@ -48,15 +46,15 @@
 		continueBuild('Starting build of ' + extensionName + ' v' + extensionVersion);
 	};
 
-	// Generate zip filenames based on the extension name, version, and variant
-	const getZipFileName = (extensionVariant) => {
-		return extensionName + '-' + extensionVersion + '-' + extensionVariant + '.zip';
+	// Generate zip filenames based on the extension name and version
+	const getZipFileName = () => {
+		return extensionName + '-' + extensionVersion + '.zip';
 	};
 
 	// Generate zip files
 	const zipBuildFolders = async () => {
 		try {
-			zip(chromiumSubfolder).compress().save(join(buildFolder, getZipFileName('chromium')));
+			zip(buildFolder).compress().save(join(buildFolder, getZipFileName()));
 
 			continueBuild('Files zipped');
 		} catch (error) {
@@ -64,32 +62,30 @@
 		}
 	};
 
-	// Compress images
-	const compressImages = async () => {
+	// Generate extension icons in multiple sizes
+	const generateIcons = async () => {
 		try {
-			const result = await imagemin(['img/*.png'], {
-				destination: join(chromiumSubfolder, 'img'),
-				plugins: [
-					optiPng({
-						optimizationLevel: 7
+			await Promise.all([128, 64, 48, 32, 16].map(size => {
+				return sharp(iconFilename)
+					.resize(size, size)
+					.png({
+						compressionLevel: 9,
+						adaptiveFiltering: true,
+						palette: true
 					})
-				]
-			});
+					.toFile(join(buildFolder, `${size}.png`));
+			}));
 
-			if (!result || result.length == 0) {
-				throw new Error('No images were found');
-			}
-
-			continueBuild('Images compressed');
+			continueBuild('Icons generated');
 		} catch (error) {
-			cancelBuild('Error while compressing images', error);
+			cancelBuild('Error while generating icons', error);
 		}
 	};
 
 	// Copy files to build folder
 	const copyFiles = async () => {
 		const copyPromises = filesToCopy.map(filename => {
-			return fs.copy(filename, join(chromiumSubfolder, filename));
+			return fs.copy(filename, join(buildFolder, filename));
 		});
 
 		try {
@@ -105,7 +101,6 @@
 	const cleanBuildFolder = async () => {
 		try {
 			await fs.emptyDir(buildFolder);
-			await fs.emptyDir(chromiumSubfolder);
 
 			continueBuild('Cleaned build folder');
 		} catch (error) {
@@ -113,35 +108,11 @@
 		}
 	};
 
-	// Generate complete store listing descriptions from localized messages
-	const generateStoreListings = async () => {
-		const localeCodes = (() => fs.readdirSync(localeFolder).filter(filename => fs.statSync(join(localeFolder, filename)).isDirectory()))();
-
-		if (localeCodes !== null) {
-			localeCodes.forEach(localeCode => {
-				const messages = JSON.parse(fs.readFileSync(join(localeFolder, localeCode, 'messages.json')));
-				const listingText = Object.keys(messages)
-					.filter(key => key.substring(0, 5) === 'store')
-					.map(key => messages[key].message)
-					.join('\n\n');
-
-				fs.writeFile(join(buildFolder, 'store-listing-' + localeCode + '.txt'), listingText, error => {
-					if (error) {
-						cancelBuild('Error while generating store listings for' + localeCode.toUpperCase(), error);
-					} else {
-						continueBuild('Store listing generated for ' + localeCode.toUpperCase());
-					}
-				});
-			});
-		}
-	};
-
 	await getExtensionDetails();
 	await cleanBuildFolder();
 	await copyFiles();
-	await compressImages();
+	await generateIcons();
 	await zipBuildFolders();
-	await generateStoreListings();
 
 	console.log();
 	continueBuild('BUILD COMPLETE (' + new Date().toLocaleTimeString() + ')\n');
