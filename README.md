@@ -1,7 +1,7 @@
 # Random Text Generator for Outlook [Extension]
 ![](https://img.shields.io/badge/type-Extension-yellow.svg "Project type")
 ![](https://img.shields.io/github/repo-size/jerboa88/rtg-for-outlook.svg "Repository size")
-[![](https://img.shields.io/github/license/jerboa88/rtg-for-outlook.svg "Project license")](LICENSE.md)
+[![](https://img.shields.io/github/license/jerboa88/rtg-for-outlook.svg "Project license")](LICENSE)
 
 A browser extension that temporarily replaces private email content with random text for development purposes. This is used by the [Dark Mode for Outlook][dfmo_link] extension to generate screenshots that can be uploaded to extension stores.
 
@@ -24,7 +24,9 @@ Senders' names are replaced with random American names and attachments are hidde
 Since this project is small, we use a MAJOR.MINOR versioning system where the major version is bumped on breaking changes and the minor version is bumped on all other features and bug fixes.
 
 ## License
-This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for details. Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
+This project is licensed under the [MIT License](LICENSE). This project includes various resources which carry their own copyright notices and license terms. See [LICENSE-THIRD-PARTY.md](LICENSE-THIRD-PARTY.md) for more details.
+
+Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
 
 
 [dfmo_link]: https://github.com/jerboa88/dark-mode-for-outlook

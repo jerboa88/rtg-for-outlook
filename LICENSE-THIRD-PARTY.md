@@ -2,8 +2,6 @@
 
 # Third-party Licenses
 
-This project includes various resources which carry their own copyright notices and
-license terms.
 
 ## First and last names used in background.js are taken from [NameDatabases](https://github.com/smashew/NameDatabases/blob/master/NamesDatabases/first%20names/us.txt) which was created by Matthew Hager (smashew) and is licensed under the Unlicense:
 
