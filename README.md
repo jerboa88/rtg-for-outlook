@@ -1,9 +1,25 @@
-# Random Text Generator for Outlook [Extension]
-![](https://img.shields.io/badge/type-Extension-yellow.svg "Project type")
-![](https://img.shields.io/github/repo-size/jerboa88/rtg-for-outlook.svg "Repository size")
-[![](https://img.shields.io/github/license/jerboa88/rtg-for-outlook.svg "Project license")](LICENSE)
+<!-- Project Header -->
+<div align="center"> 
+  <img class="projectLogo" src="icon.svg" alt="Project logo" title="Project logo" width="256">
 
-A browser extension that temporarily replaces private email content with random text for development purposes. This is used by the [Dark Mode for Outlook][dfmo_link] extension to generate screenshots that can be uploaded to extension stores.
+  <h1 class="projectName">Random Text Generator for Outlook</h1>
+
+  <p class="projectBadges">
+    <img src="https://img.shields.io/badge/type-Extension-ffc107.svg" alt="Project type" title="Project type">
+    <img src="https://img.shields.io/github/languages/top/jerboa88/rtg-for-outlook.svg" alt="Language" title="Language">
+    <img src="https://img.shields.io/github/repo-size/jerboa88/rtg-for-outlook.svg" alt="Repository size" title="Repository size">
+    <a href="LICENSE">
+      <img src="https://img.shields.io/github/license/jerboa88/rtg-for-outlook.svg" alt="Project license" title="Project license"/>
+    </a>
+  </p>
+  
+  <p class="projectDesc">
+    A browser extension that temporarily replaces private email content with random text for development purposes. This is used by the <a href="https://github.com/jerboa88/dark-mode-for-outlook">Dark Mode for Outlook</a> extension to generate screenshots that can be uploaded to extension stores.
+  </p>
+  
+  <br/>
+</div>
+
 
 ## Installation
 Download the repository, run `npm install` to install dependencies, and build the project with `npm start`. Make sure you have npm and Node.js v10.0.0 or greater installed ([how?](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)). If you have any issues running the build script, you can perform all the steps in that script manually.
