@@ -1,0 +1,13 @@
+{
+  "$schema": "https://johng.io/schema/project-metadata.json",
+  "name": "Random Text Generator for Outlook",
+  "background": "A browser extension that temporarily replaces private email content on Outlook.com with random text for development purposes. Created to help automate publishing of screenshots for one of my other extensions.",
+	"logoPath": "icon.svg",
+	"category": "Extension",
+	"subcategory": "Browser",
+  "schema": {
+    "type": "Software",
+    "applicationCategory": "Developer",
+    "operatingSystem": "Any"
+  }
+}
