@@ -13,7 +13,7 @@
     </a>
   </p>
   
-  <p class="projectDesc" data-exposition="A browser extension that temporarily replaces private email content on Outlook.com with random text for development purposes. Created to help automate publishing of screenshots for one of my other extensions.">
+  <p class="projectDesc">
     A browser extension that temporarily replaces private email content with random text for development purposes. This is used by the <a href="https://github.com/jerboa88/dark-mode-for-outlook">Dark Mode for Outlook</a> extension to generate screenshots that can be uploaded to extension stores.
   </p>
   
