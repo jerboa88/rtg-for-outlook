@@ -36,13 +36,30 @@ Install the extension and click the browser action button while on one of the fo
 
 Senders' names are replaced with random American names and attachments are hidden completely. Subjects, messages, and folders are replaced with random Lorem Ipsum text. See [Dark Mode for Outlook][dfmo_link] for example screenshots.
 
+
 ## Contributing
 Since this project is small, we use a MAJOR.MINOR versioning system where the major version is bumped on breaking changes and the minor version is bumped on all other features and bug fixes.
+
 
 ## License
 This project is licensed under the [MIT License](LICENSE). This project includes various resources which carry their own copyright notices and license terms. See [LICENSE-THIRD-PARTY.md](LICENSE-THIRD-PARTY.md) for more details.
 
 Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
+
+
+## 💕 Funding
+
+Find this project useful? [Sponsoring me](https://johng.io/funding) will help me cover costs and **_commit_** more time to open-source.
+
+If you can't donate but still want to contribute, don't worry. There are many other ways to help out, like:
+
+- 📢 reporting (submitting feature requests & bug reports)
+- 👨‍💻 coding (implementing features & fixing bugs)
+- 📝 writing (documenting & translating)
+- 💬 spreading the word
+- ⭐ starring the project
+
+I appreciate the support!
 
 
 [dfmo_link]: https://github.com/jerboa88/dark-mode-for-outlook
