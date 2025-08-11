@@ -14,11 +14,15 @@
   </p>
   
   <p class="projectDesc">
-    A browser extension that temporarily replaces private email content with random text for development purposes. This is used by the <a href="https://github.com/jerboa88/dark-mode-for-outlook">Dark Mode for Outlook</a> extension to generate screenshots that can be uploaded to extension stores.
+    A browser extension that temporarily replaces private email content in Outlook with random text for development purposes.
   </p>
   
   <br/>
 </div>
+
+
+## 👋 About
+A browser extension that temporarily replaces private email content in Outlook with random text for development purposes. This is used by the [Dark Mode for Outlook] extension to generate screenshots that can be uploaded to extension stores.
 
 
 ## 📦 Installation
@@ -34,7 +38,7 @@ Install the extension and click the browser action button while on one of the fo
 - http(s)://outlook.office365.com/
 - http(s)://support.office.live.com/
 
-Senders' names are replaced with random American names and attachments are hidden completely. Subjects, messages, and folders are replaced with random Lorem Ipsum text. See [Dark Mode for Outlook][dfmo_link] for example screenshots.
+Senders' names are replaced with random American names and attachments are hidden completely. Subjects, messages, and folders are replaced with random Lorem Ipsum text. See [Dark Mode for Outlook] for example screenshots.
 
 
 ## 🤝 Contributing
@@ -47,8 +51,11 @@ This project is licensed under the [MIT License](LICENSE). This project includes
 Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
 
 
-## 💕 Funding
+## 🖇️ Related
+- **[Dark Mode for Outlook]**: A browser extension/add-on that applies a better dark theme to Microsoft Outlook and removes ads. Available for Chrome, Firefox, Edge, and Opera, with partial support for Firefox mobile!
 
+
+## 💕 Funding
 Find this project useful? [Sponsoring me](https://johng.io/funding) will help me cover costs and **_commit_** more time to open-source.
 
 If you can't donate but still want to contribute, don't worry. There are many other ways to help out, like:
@@ -62,4 +69,4 @@ If you can't donate but still want to contribute, don't worry. There are many ot
 I appreciate the support!
 
 
-[dfmo_link]: https://github.com/jerboa88/dark-mode-for-outlook
+[Dark Mode for Outlook]: https://github.com/jerboa88/dark-mode-for-outlook
