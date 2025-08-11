@@ -21,13 +21,13 @@
 </div>
 
 
-## Installation
+## 📦 Installation
 Download the repository, run `npm install` to install dependencies, and build the project with `npm start`. Make sure you have npm and Node.js v10.0.0 or greater installed ([how?](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)). If you have any issues running the build script, you can perform all the steps in that script manually.
 
 Next, the build directory or zip file can be loaded into your browser of choice: [Chrome](https://developer.chrome.com/extensions/getstarted#manifest) / [Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) / [Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/part1-simple-extension#run-your-extension-locally-in-your-browser-while-developing-it-side-loading) / [Opera](https://dev.opera.com/extensions/testing/)
 
 
-## Usage
+## 🕹️ Usage
 Install the extension and click the browser action button while on one of the following domains to run the replacement script:
 - http(s)://outlook.live.com/
 - http(s)://outlook.office.com/
@@ -37,11 +37,11 @@ Install the extension and click the browser action button while on one of the fo
 Senders' names are replaced with random American names and attachments are hidden completely. Subjects, messages, and folders are replaced with random Lorem Ipsum text. See [Dark Mode for Outlook][dfmo_link] for example screenshots.
 
 
-## Contributing
+## 🤝 Contributing
 Since this project is small, we use a MAJOR.MINOR versioning system where the major version is bumped on breaking changes and the minor version is bumped on all other features and bug fixes.
 
 
-## License
+## 🧾 License
 This project is licensed under the [MIT License](LICENSE). This project includes various resources which carry their own copyright notices and license terms. See [LICENSE-THIRD-PARTY.md](LICENSE-THIRD-PARTY.md) for more details.
 
 Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
